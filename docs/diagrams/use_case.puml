@@ -1,0 +1,70 @@
+@startuml use_case
+' Диаграмма вариантов использования информационной системы «Учёт продуктов».
+' Исправленная версия диаграммы из лабораторной работы №1:
+'  - связи актёров с прецедентами — ассоциации (линии без стрелок);
+'  - добавлены «Вход в систему» и «Управление пользователями»;
+'  - общие шаги вынесены в отношения <<include>> и <<extend>>.
+
+left to right direction
+skinparam packageStyle rectangle
+skinparam defaultFontName DejaVu Sans
+skinparam shadowing false
+skinparam usecase {
+  BackgroundColor #F7FBFF
+  BorderColor #2F6FA3
+}
+skinparam actorBorderColor #2F6FA3
+skinparam rectangleBorderColor #2F6FA3
+
+actor "Сотрудник\n(кладовщик)" as Employee
+actor "Администратор" as Admin
+
+rectangle "Информационная система «Учёт продуктов»" {
+  usecase "Вход в систему" as UC_Login
+
+  usecase "Регистрация поступления" as UC_Income
+  usecase "Регистрация расхода\n(списания)" as UC_WriteOff
+  usecase "Поиск продукта\nпо названию или категории" as UC_Search
+  usecase "Проверка\nдостаточности остатка" as UC_CheckStock
+  usecase "Просмотр остатков\nи сроков годности" as UC_Stock
+
+  usecase "Формирование отчётов" as UC_Reports
+  usecase "Отчёт о продуктах\nс истекающим сроком" as UC_Expiry
+
+  usecase "Управление карточками\nпродуктов" as UC_Products
+  usecase "Управление категориями" as UC_Categories
+  usecase "Управление пользователями" as UC_Users
+  usecase "Просмотр истории операций" as UC_History
+}
+
+actor "Руководитель" as Manager
+
+' --- Вход в систему нужен всем пользователям ---
+Employee -- UC_Login
+Admin -- UC_Login
+UC_Login -- Manager
+
+' --- Сотрудник ---
+Employee -- UC_Search
+Employee -- UC_Income
+Employee -- UC_WriteOff
+Employee -- UC_Stock
+
+' --- Администратор ---
+Admin -- UC_Reports
+Admin -- UC_Products
+Admin -- UC_Categories
+Admin -- UC_Users
+Admin -- UC_History
+
+' --- Руководитель ---
+UC_Stock -- Manager
+UC_Reports -- Manager
+
+' --- Включения и расширения ---
+UC_Income ..> UC_Search : <<include>>
+UC_WriteOff ..> UC_Search : <<include>>
+UC_WriteOff ..> UC_CheckStock : <<include>>
+UC_Expiry ..> UC_Reports : <<extend>>
+
+@enduml
