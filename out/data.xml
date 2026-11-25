@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8'?>
+<products>
+  <product>
+    <id>1</id>
+    <name>Молоко 3,2%</name>
+    <unit>л</unit>
+    <quantity>24.0</quantity>
+    <price>89.9</price>
+    <expiry_date>2026-12-15</expiry_date>
+    <category>
+      <id>1</id>
+      <name>Молочные продукты</name>
+    </category>
+  </product>
+  <product>
+    <id>2</id>
+    <name>Кефир 1%</name>
+    <unit>л</unit>
+    <quantity>10.0</quantity>
+    <price>74.5</price>
+    <expiry_date>2026-12-10</expiry_date>
+    <category>
+      <id>1</id>
+      <name>Молочные продукты</name>
+    </category>
+  </product>
+  <product>
+    <id>3</id>
+    <name>Хлеб пшеничный</name>
+    <unit>шт</unit>
+    <quantity>15.0</quantity>
+    <price>45.0</price>
+    <expiry_date>2026-12-05</expiry_date>
+    <category>
+      <id>2</id>
+      <name>Хлебобулочные изделия</name>
+    </category>
+  </product>
+  <product>
+    <id>4</id>
+    <name>Батон нарезной</name>
+    <unit>шт</unit>
+    <quantity>12.0</quantity>
+    <price>38.0</price>
+    <expiry_date>2026-12-03</expiry_date>
+    <category>
+      <id>2</id>
+      <name>Хлебобулочные изделия</name>
+    </category>
+  </product>
+  <product>
+    <id>5</id>
+    <name>Гречка</name>
+    <unit>кг</unit>
+    <quantity>40.0</quantity>
+    <price>110.0</price>
+    <expiry_date>2027-08-25</expiry_date>
+    <category>
+      <id>3</id>
+      <name>Крупы</name>
+    </category>
+  </product>
+  <product>
+    <id>6</id>
+    <name>Рис длиннозёрный</name>
+    <unit>кг</unit>
+    <quantity>25.0</quantity>
+    <price>95.0</price>
+    <expiry_date>2027-06-30</expiry_date>
+    <category>
+      <id>3</id>
+      <name>Крупы</name>
+    </category>
+  </product>
+</products>

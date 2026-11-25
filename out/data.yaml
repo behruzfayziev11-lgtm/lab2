@@ -1,0 +1,54 @@
+- id: 1
+  name: Молоко 3,2%
+  unit: л
+  quantity: 24.0
+  price: 89.9
+  expiry_date: "2026-12-15"
+  category:
+    id: 1
+    name: Молочные продукты
+- id: 2
+  name: Кефир 1%
+  unit: л
+  quantity: 10.0
+  price: 74.5
+  expiry_date: "2026-12-10"
+  category:
+    id: 1
+    name: Молочные продукты
+- id: 3
+  name: Хлеб пшеничный
+  unit: шт
+  quantity: 15.0
+  price: 45.0
+  expiry_date: "2026-12-05"
+  category:
+    id: 2
+    name: Хлебобулочные изделия
+- id: 4
+  name: Батон нарезной
+  unit: шт
+  quantity: 12.0
+  price: 38.0
+  expiry_date: "2026-12-03"
+  category:
+    id: 2
+    name: Хлебобулочные изделия
+- id: 5
+  name: Гречка
+  unit: кг
+  quantity: 40.0
+  price: 110.0
+  expiry_date: "2027-08-25"
+  category:
+    id: 3
+    name: Крупы
+- id: 6
+  name: Рис длиннозёрный
+  unit: кг
+  quantity: 25.0
+  price: 95.0
+  expiry_date: "2027-06-30"
+  category:
+    id: 3
+    name: Крупы
